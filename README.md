@@ -80,13 +80,13 @@ OgpData:
 ```dart
 void main() async {
     const String url = 'https://pub.dev/';
-    final OgpData? ogpData = await OgpDataFetch.execute(url);
-    print(ogpData!.url); // https://pub.dev/
-    print(ogpData.type); // website
-    print(ogpData.title); // Dart packages
-    print(ogpData.description); // Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.
-    print(ogpData.image); // https://pub.dev/static/img/pub-dev-icon-cover-image.png?hash=vg86r2r3mbs62hiv4ldop0ife5um2g5g
-    print(ogpData.siteName); // Dart packages
+    final OgpData? ogpData = await OgpDataExtract.execute(url);
+    print(ogpData?.url); // https://pub.dev/
+    print(ogpData?.type); // website
+    print(ogpData?.title); // Dart packages
+    print(ogpData?.description); // Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.
+    print(ogpData?.image); // https://pub.dev/static/img/pub-dev-icon-cover-image.png?hash=vg86r2r3mbs62hiv4ldop0ife5um2g5g
+    print(ogpData?.siteName); // Dart packages
 }
 ```
 
@@ -96,7 +96,7 @@ void main() async {
 void main() async {
     const String url = 'https://pub.dev/';
     const String userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1';
-    final OgpData? ogpData = await OgpDataFetch.execute(url, userAgent: userAgent);
+    final OgpData? ogpData = await OgpDataExtract.execute(url, userAgent: userAgent);
     print(ogpData);
 }
 ```
@@ -107,7 +107,7 @@ void main() async {
 void main() async {
     const String url = 'https://pub.dev/';
     final http.Response response = await http.get(Uri.parse(url));
-    final Document? document = OgpDataFetch.toDocument(response);
+    final Document? document = OgpDataExtract.toDocument(response);
     final OgpData ogpData = OgpDataParser(document).parse();
     print(ogpData);
 }

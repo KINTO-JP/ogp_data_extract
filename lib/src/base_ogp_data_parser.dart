@@ -127,7 +127,6 @@ mixin BaseOgpDataParser {
 }
 
 class OgpData with BaseOgpDataParser, OgpDataKeys {
-
   @override
   String toString() {
     return toMap().toString();
@@ -221,18 +220,46 @@ class OgpData with BaseOgpDataParser, OgpDataKeys {
     return o;
   }
 
-
   OgpData copyWith({
-    String? url, String? type, String? title, String? description, String? image,
-    String? imageSecureUrl, String? imageType, String? imageWidth, String? imageHeight,
-    String? imageAlt, String? siteName, String? determiner, String? locale,
-    String? localeAlternate, String? latitude, String? longitude, String? streetAddress,
-    String? locality, String? region, String? postalCode, String? countryName,
-    String? email, String? phoneNumber, String? faxNumber, String? video,
-    String? videoSecureUrl, String? videoHeight, String? videoWidth, String? videoType,
-    String? audio, String? audioSecureUrl, String? audioTitle, String? audioArtist,
-    String? audioAlbum, String? audioType, String? fbAdmins, String? fbAppId,
-    String? twitterCard, String? twitterSite,
+    String? url,
+    String? type,
+    String? title,
+    String? description,
+    String? image,
+    String? imageSecureUrl,
+    String? imageType,
+    String? imageWidth,
+    String? imageHeight,
+    String? imageAlt,
+    String? siteName,
+    String? determiner,
+    String? locale,
+    String? localeAlternate,
+    String? latitude,
+    String? longitude,
+    String? streetAddress,
+    String? locality,
+    String? region,
+    String? postalCode,
+    String? countryName,
+    String? email,
+    String? phoneNumber,
+    String? faxNumber,
+    String? video,
+    String? videoSecureUrl,
+    String? videoHeight,
+    String? videoWidth,
+    String? videoType,
+    String? audio,
+    String? audioSecureUrl,
+    String? audioTitle,
+    String? audioArtist,
+    String? audioAlbum,
+    String? audioType,
+    String? fbAdmins,
+    String? fbAppId,
+    String? twitterCard,
+    String? twitterSite,
   }) {
     final OgpData o = OgpData();
     o.url = url ?? this.url;

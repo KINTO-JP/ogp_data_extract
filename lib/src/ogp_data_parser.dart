@@ -125,14 +125,17 @@ class OgpDataParser with BaseOgpDataParser {
   @override
   String toString() => parse().toString();
 
-  String? _getContent({String tag = 'meta', String attribute = 'property',
-        String? property, String key = 'content',
-      }) {
+  String? _getContent({
+    String tag = 'meta',
+    String attribute = 'property',
+    String? property,
+    String key = 'content',
+  }) {
     return _document
         ?.getElementsByTagName(tag)
         .cast<Element?>()
         .firstWhere((element) => element?.attributes[attribute] == property,
-        orElse: () => null)
+            orElse: () => null)
         ?.attributes[key];
   }
 }

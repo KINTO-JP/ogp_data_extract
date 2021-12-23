@@ -5,7 +5,6 @@ import 'package:http/http.dart' as http;
 import 'package:ogp_data_extract/ogp_data_extract.dart';
 
 void main() {
-
   test('Use Ogp Data Extract Execute Test', () async {
     const String url = 'https://pub.dev/';
     final OgpData? ogpData = await OgpDataExtract.execute(url);
@@ -14,8 +13,10 @@ void main() {
     expect(ogpData!.url, 'https://pub.dev/');
     expect(ogpData.type, 'website');
     expect(ogpData.title, 'Dart packages');
-    expect(ogpData.description, 'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.');
-    expect(ogpData.image, 'https://pub.dev/static/img/pub-dev-icon-cover-image.png?hash=vg86r2r3mbs62hiv4ldop0ife5um2g5g');
+    expect(ogpData.description,
+        'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.');
+    expect(ogpData.image,
+        'https://pub.dev/static/img/pub-dev-icon-cover-image.png?hash=vg86r2r3mbs62hiv4ldop0ife5um2g5g');
     expect(ogpData.siteName, 'Dart packages');
   });
 
@@ -32,8 +33,10 @@ void main() {
 
     expect(ogpData.url, '//flutter.dev/');
     expect(ogpData.title, 'Flutter - Build apps for any screen');
-    expect(ogpData.description, 'Flutter transforms the entire app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.');
-    expect(ogpData.image, 'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png');
+    expect(ogpData.description,
+        'Flutter transforms the entire app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.');
+    expect(ogpData.image,
+        'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png');
   });
 
   test('Twitter Test', () async {
@@ -41,7 +44,7 @@ void main() {
     final OgpData? ogpData = await OgpDataExtract.execute(url);
     expect(ogpData!.title, 'Flutter on Twitter');
     expect(ogpData.type, 'article');
-    expect(ogpData.image, 'https://pbs.twimg.com/tweet_video_thumb/FGII52MVkAQN-Sj.jpg');
+    expect(ogpData.image,
+        'https://pbs.twimg.com/tweet_video_thumb/FGII52MVkAQN-Sj.jpg');
   });
-
 }
