@@ -7,6 +7,7 @@ import 'package:ogp_data_extract/utility/user_agent_client.dart';
 import 'package:string_validator/string_validator.dart';
 
 class OgpDataExtract {
+  /// returns [OgpData] from [url] and [userAgent].
   static Future<OgpData?> execute(String url,
       {String userAgent = 'bot'}) async {
     if (!isURL(url)) {
@@ -24,6 +25,7 @@ class OgpDataExtract {
     return OgpDataParser(document).parse();
   }
 
+  /// returns [html.Document] from [http.Response].
   static Document? toDocument(http.Response response) {
     if (response.statusCode != 200) {
       return null;

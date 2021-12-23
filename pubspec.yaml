@@ -1,7 +1,7 @@
 name: ogp_data_extract
 description: A new Flutter package project for extracting ogp data on web pages.
-version: 0.1.1
-homepage: https://github.com/KINTO-JP
+version: 0.1.2
+homepage: https://github.com/KINTO-JP/ogp_data_extract
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

@@ -126,6 +126,7 @@ mixin BaseOgpDataParser {
   }
 }
 
+/// Container class for OgpData.
 class OgpData with BaseOgpDataParser, OgpDataKeys {
   @override
   String toString() {
