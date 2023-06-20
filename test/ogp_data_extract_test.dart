@@ -14,9 +14,9 @@ void main() {
     expect(ogpData.type, 'website');
     expect(ogpData.title, 'Dart packages');
     expect(ogpData.description,
-        'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.');
+        'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter and general Dart programs.');
     expect(ogpData.image,
-        'https://pub.dev/static/img/pub-dev-icon-cover-image.png?hash=vg86r2r3mbs62hiv4ldop0ife5um2g5g');
+        'https://pub.dev/static/hash-a7li5m3f/img/pub-dev-icon-cover-image.png');
     expect(ogpData.siteName, 'Dart packages');
   });
 
@@ -45,6 +45,6 @@ void main() {
     expect(ogpData!.title, 'Flutter on Twitter');
     expect(ogpData.type, 'article');
     expect(ogpData.image,
-        'https://pbs.twimg.com/tweet_video_thumb/FGII52MVkAQN-Sj.jpg');
+        'https://pbs.twimg.com/tweet_video_thumb/FGII52MVkAQN-Sj.jpg:large');
   });
 }

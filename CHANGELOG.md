@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Update Dependency Libraries.
+
 ## 0.1.2
 
 * Resolve that more than 20% of public APIs are dartdoc comments.
