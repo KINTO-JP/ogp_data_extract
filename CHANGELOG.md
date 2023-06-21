@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Resolve the warning on the pub.dev score.
+
 ## 0.1.3
 
 * Update Dependency Libraries.

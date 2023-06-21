@@ -1,7 +1,7 @@
 ogp_data_extract
 =============
 
-A simple dart library for extracting the Open Graph protocol on a web pages.
+A simple dart library for extracting the Open Graph protocol on a web pages. This library allows you to retrieve metadata items defined in "The Open Graph protocol".
 
 ## Getting Started
 
