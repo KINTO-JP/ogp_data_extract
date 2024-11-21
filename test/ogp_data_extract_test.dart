@@ -12,11 +12,11 @@ void main() {
     expect(ogpData, isNotNull);
     expect(ogpData!.url, 'https://pub.dev/');
     expect(ogpData.type, 'website');
-    expect(ogpData.title, 'Dart packages');
+    expect(ogpData.title, 'The official repository for Dart and Flutter packages.');
     expect(ogpData.description,
         'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter and general Dart programs.');
     expect(ogpData.image,
-        'https://pub.dev/static/hash-a7li5m3f/img/pub-dev-icon-cover-image.png');
+        'https://pub.dev/static/hash-qgm0u739/img/pub-dev-icon-cover-image.png');
     expect(ogpData.siteName, 'Dart packages');
   });
 
@@ -42,7 +42,7 @@ void main() {
   test('Twitter Test', () async {
     String url = 'https://twitter.com/FlutterDev/status/1468747974792540163';
     final OgpData? ogpData = await OgpDataExtract.execute(url);
-    expect(ogpData!.title, 'Flutter on Twitter');
+    expect(ogpData!.title, 'Flutter (@FlutterDev) on X');
     expect(ogpData.type, 'article');
     expect(ogpData.image,
         'https://pbs.twimg.com/tweet_video_thumb/FGII52MVkAQN-Sj.jpg:large');
