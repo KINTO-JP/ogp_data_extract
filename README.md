@@ -9,7 +9,7 @@ In your package's pubspec.yaml file add the dependency.
 
 ```yaml
 dependencies:
-  ogp_data_extract: ^0.x.x
+  ogp_data_extract: ^0.2.x
 ```
 
 You can install packages from the command line.

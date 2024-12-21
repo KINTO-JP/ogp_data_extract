@@ -1,3 +1,8 @@
+## 0.2.0
+
+* Added support for retrieving favicon image URLs.
+  * Implemented a feature to extract and return the URL of a website's favicon.
+
 ## 0.1.5
 
 * Update Dependency Libraries.
