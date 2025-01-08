@@ -16,8 +16,16 @@ void main() {
     expect(ogpData.description,
         'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter and general Dart programs.');
     expect(ogpData.image,
-        'https://pub.dev/static/hash-qgm0u739/img/pub-dev-icon-cover-image.png');
+        'https://pub.dev/static/hash-smmb6j0s/img/pub-dev-icon-cover-image.png');
     expect(ogpData.siteName, 'Dart packages');
+  });
+
+  test('Fetch Favicon Test', () async {
+    const String url = 'https://pub.dev/';
+    final String? favicon = await OgpDataExtract.fetchFavicon(url);
+
+    expect(favicon, isNotNull);
+    expect(favicon, '/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8');
   });
 
   test('Use The Parser Manually Test', () async {
