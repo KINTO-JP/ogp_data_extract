@@ -25,11 +25,11 @@ class OgpDataExtract {
     return OgpDataParser(document).parse();
   }
 
-  /// returns [String] from [url] and [userAgent].
-  static Future<String?> fetchFavicon(String url,
+  /// returns [List<String?>] from [url] and [userAgent].
+  static Future<List<String?>> fetchFavicon(String url,
       {String userAgent = 'bot'}) async {
     if (!isURL(url)) {
-      return null;
+      return [];
     }
 
     final UserAgentClient client = UserAgentClient(userAgent, http.Client());
@@ -37,7 +37,7 @@ class OgpDataExtract {
 
     final Document? document = toDocument(response);
     if (document == null) {
-      return null;
+      return [];
     }
 
     final FaviconParser faviconParser = FaviconParser(document);

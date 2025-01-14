@@ -22,10 +22,10 @@ void main() {
 
   test('Fetch Favicon Test', () async {
     const String url = 'https://pub.dev/';
-    final String? favicon = await OgpDataExtract.fetchFavicon(url);
+    final List<String?> favicons = await OgpDataExtract.fetchFavicon(url);
 
-    expect(favicon, isNotNull);
-    expect(favicon, '/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8');
+    expect(favicons, isNotNull);
+    expect(favicons.first, '/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8');
   });
 
   test('Use The Parser Manually Test', () async {
