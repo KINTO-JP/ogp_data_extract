@@ -7,7 +7,8 @@ void main() async {
   if (kDebugMode) {
     print(ogpData?.url); // https://pub.dev/
     print(ogpData?.type); // website
-    print(ogpData?.title); // The official repository for Dart and Flutter packages.
+    print(ogpData
+        ?.title); // The official repository for Dart and Flutter packages.
     print(ogpData
         ?.description); // Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter, AngularDart, and general Dart programs.
     print(ogpData

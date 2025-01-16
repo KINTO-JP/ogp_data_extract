@@ -184,12 +184,13 @@ class FaviconParser {
   FaviconParser(this._document);
 
   List<String?> parse() {
-    final iconLink = _document?.querySelectorAll('link[rel*="icon"]') ??
-        <Element>[];
-    return iconLink.map((element) {
-      return element.attributes['href'];
-    })
-    .toSet()
-    .toList();
+    final iconLink =
+        _document?.querySelectorAll('link[rel*="icon"]') ?? <Element>[];
+    return iconLink
+        .map((element) {
+          return element.attributes['href'];
+        })
+        .toSet()
+        .toList();
   }
 }
