@@ -12,7 +12,8 @@ void main() {
     expect(ogpData, isNotNull);
     expect(ogpData!.url, 'https://pub.dev/');
     expect(ogpData.type, 'website');
-    expect(ogpData.title, 'The official repository for Dart and Flutter packages.');
+    expect(ogpData.title,
+        'The official repository for Dart and Flutter packages.');
     expect(ogpData.description,
         'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter and general Dart programs.');
     expect(ogpData.image,
@@ -25,7 +26,8 @@ void main() {
     final List<String?> favicons = await OgpDataExtract.fetchFavicon(url);
 
     expect(favicons, isNotNull);
-    expect(favicons.first, '/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8');
+    expect(
+        favicons.first, '/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8');
   });
 
   test('Use The Parser Manually Test', () async {
