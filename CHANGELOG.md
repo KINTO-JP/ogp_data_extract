@@ -1,3 +1,7 @@
+## 0.2.1
+
+* Formatted Dart files in the project to ensure consistent code style across the codebase.
+
 ## 0.2.0
 
 * Added support for retrieving favicon image URLs.
