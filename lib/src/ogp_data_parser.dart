@@ -178,3 +178,18 @@ class OgpDataParser with BaseOgpDataParser {
         ?.attributes[key];
   }
 }
+
+class FaviconParser {
+  final Document? _document;
+  FaviconParser(this._document);
+
+  List<String?> parse() {
+    final iconLink = _document?.querySelectorAll('link[rel*="icon"]') ??
+        <Element>[];
+    return iconLink.map((element) {
+      return element.attributes['href'];
+    })
+    .toSet()
+    .toList();
+  }
+}

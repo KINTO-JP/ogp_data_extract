@@ -2,7 +2,7 @@
 ///
 /// [OgpDataParser] is OgpData parser that takes in a [dom.Document].
 /// Utility functions [execute] and [toDocument] help retrieving and decoding documents.
-library ogp_data_extract;
+library;
 
 export 'src/ogp_data_extract_base.dart';
 export 'src/base_ogp_data_parser.dart';

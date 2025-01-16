@@ -25,19 +25,35 @@ class OgpDataExtract {
     return OgpDataParser(document).parse();
   }
 
+  /// returns [List<String?>] from [url] and [userAgent].
+  static Future<List<String?>> fetchFavicon(String url,
+      {String userAgent = 'bot'}) async {
+    if (!isURL(url)) {
+      return [];
+    }
+
+    final UserAgentClient client = UserAgentClient(userAgent, http.Client());
+    final http.Response response = await client.get(Uri.parse(url));
+
+    final Document? document = toDocument(response);
+    if (document == null) {
+      return [];
+    }
+
+    final FaviconParser faviconParser = FaviconParser(document);
+    return faviconParser.parse();
+  }
+
   /// returns [html.Document] from [http.Response].
   static Document? toDocument(http.Response response) {
     if (response.statusCode != 200) {
       return null;
     }
 
-    Document? document;
     try {
-      document = parser.parse(utf8.decode(response.bodyBytes));
+      return parser.parse(utf8.decode(response.bodyBytes));
     } catch (err) {
       return null;
     }
-
-    return document;
   }
 }
