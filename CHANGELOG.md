@@ -1,7 +1,7 @@
 ## 0.2.0
 
 * Added support for retrieving favicon image URLs.
-  * Implemented a feature to extract and return the URL of a website's favicon.
+  * Implemented functionality to extract and return all favicon URLs defined in a website's <link> tags.
 
 ## 0.1.5
 

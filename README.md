@@ -1,18 +1,18 @@
 ogp_data_extract
 =============
 
-A simple dart library for extracting the Open Graph protocol on a web pages. This library allows you to retrieve metadata items defined in "The Open Graph protocol".
+A simple Dart library for extracting Open Graph protocol metadata from web pages. This library allows you to retrieve metadata items defined in "The Open Graph protocol."  
 
 ## Getting Started
 
-In your package's pubspec.yaml file add the dependency.
+Add the dependency to your package's `pubspec.yaml` file:  
 
 ```yaml
 dependencies:
   ogp_data_extract: ^0.2.x
 ```
 
-You can install packages from the command line.
+Then, install the package using the following commands:  
 
 With Dart:
 
@@ -20,7 +20,7 @@ With Dart:
 $ dart pub get
 ```
 
-With Flutter:
+With Flutter:  
 
 ```shell
 $ flutter pub get
@@ -28,7 +28,7 @@ $ flutter pub get
 
 ## Structure
 
-reference : [The Open Graph protocol](https://ogp.me/)
+This library supports the extraction of the following Open Graph protocol metadata fields, as specified in the [Open Graph protocol documentation](https://ogp.me/):  
 
 ```text
 OgpData:
@@ -77,6 +77,8 @@ OgpData:
 
 ### Parse OgpData for a given URL
 
+You can extract Open Graph metadata for a specific URL as shown in the following example:  
+
 ```dart
 void main() async {
     const String url = 'https://pub.dev/';
@@ -92,6 +94,8 @@ void main() async {
 
 ### Specify the User-Agent when parsing
 
+You can specify a custom User-Agent string for the request, which is useful for targeting specific devices or environments:  
+
 ```dart
 void main() async {
     const String url = 'https://pub.dev/';
@@ -103,6 +107,8 @@ void main() async {
 
 ### Use the parser manually
 
+If you already have the HTML content of a webpage, you can parse it manually using the following approach:  
+
 ```dart
 void main() async {
     const String url = 'https://pub.dev/';
@@ -113,8 +119,24 @@ void main() async {
 }
 ```
 
+### Fetch Favicon for a Web Page
+
+In addition to Open Graph protocol extraction, this library also provides a utility to fetch the favicon URLs from a given webpage. This is useful for retrieving the associated website icons dynamically.
+
+#### Example: Fetch Favicon
+
+You can fetch all available favicon URLs for a given URL using the `fetchFavicon` method. Here's an example:
+
+```dart
+void main() async {
+  const String url = 'https://pub.dev/';
+  final List<String?> favicons = await OgpDataExtract.fetchFavicon(url);
+  print(favicons); // Example output: ['/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8']
+}
+```
+
+This method parses the <link> tags in the webpage to find any icon-related metadata and returns a list of favicon URLs.  
+
 ## Credit
 
-This library is inspired by [metadata_fetch](https://pub.dev/packages/metadata_fetch).
-
-However, this one is specialized for Open Graph protocol extraction.
+This library is inspired by [metadata_fetch](https://pub.dev/packages/metadata_fetch), but it is specifically designed for Open Graph protocol extraction.  
