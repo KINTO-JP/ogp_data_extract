@@ -17,7 +17,7 @@ void main() {
     expect(ogpData.description,
         'Pub is the package manager for the Dart programming language, containing reusable libraries & packages for Flutter and general Dart programs.');
     expect(ogpData.image,
-        'https://pub.dev/static/hash-2903vt9p/img/pub-dev-icon-cover-image.png');
+        'https://pub.dev/static/hash-jc0slbjj/img/pub-dev-icon-cover-image.png');
     expect(ogpData.siteName, 'Dart packages');
   });
 
@@ -46,7 +46,7 @@ void main() {
     expect(ogpData.description,
         'Flutter transforms the entire app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.');
     expect(ogpData.image,
-        'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png');
+        'https://storage.googleapis.com/cms-storage-bucket/flutter-logo-sharing.70760bf1e88b184bb1bc.png');
   });
 
   test('Twitter Test', () async {
@@ -88,7 +88,6 @@ void main() {
     expect(ogpData.description, 'This is an example article description.');
     expect(ogpData.image, 'https://example.com/image.jpg');
     expect(ogpData.siteName, 'Example Site');
-
     expect(ogpData.articleTags, containsAll(['flutter', 'dart']));
     expect(ogpData.videoTags, contains('tutorial'));
     expect(ogpData.bookTags, contains('programming'));

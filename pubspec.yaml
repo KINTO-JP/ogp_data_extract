@@ -1,6 +1,6 @@
 name: ogp_data_extract
 description: This is a new package project for extracting ogp data on web pages. This library allows you to retrieve metadata items defined in "The Open Graph protocol".
-version: 0.2.1
+version: 0.2.2
 homepage: https://github.com/KINTO-JP/ogp_data_extract
 
 environment:
@@ -9,11 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  html: ^0.15.5
-  http: ^1.2.2
-  string_validator: ^1.1.0
+  html: ^0.15.6
+  http: ^1.4.0
+  string_validator: ^1.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0

@@ -71,6 +71,9 @@ OgpData:
     - fbAppId
     - twitterCard
     - twitterSite
+    - articleTags
+    - bookTags
+    - videoTags
 ```
 
 ## Usage

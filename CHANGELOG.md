@@ -1,3 +1,8 @@
+## 0.2.2
+* Added support for parsing multiple Open Graph meta tags that can appear multiple times.
+  * Implemented parsing for `article:tag`, `video:tag`, and `book:tag` meta tags.
+  * Added `articleTags`, `videoTags`, and `bookTags` properties to `OgpDataParser` to return lists of tag contents.
+
 ## 0.2.1
 
 * Formatted Dart files in the project to ensure consistent code style across the codebase.

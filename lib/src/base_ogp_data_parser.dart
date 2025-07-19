@@ -38,7 +38,6 @@ mixin OgpDataKeys {
   static const keyFbAppId = 'fb:app_id';
   static const keyTwitterCard = 'twitter:card';
   static const keyTwitterSite = 'twitter:site';
-
   static const keyArticleTag = 'article:tag';
   static const keyBookTag = 'book:tag';
   static const keyVideoTag = 'video:tag';
